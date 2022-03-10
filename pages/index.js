@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle, faGithub, faDiscord, faTwitch } from '@fortawesome/free-brands-svg-icons';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -27,9 +27,14 @@ export default function Home() {
               <FontAwesomeIcon icon={faGithub} size="xs" style={{ width: '10px', marginRight: "5px" }} /> Continuar con GitHub
             </a>
           </button>
-          <button className={styles.discord} onClick={() => LoginHandler('discord')}>
+          <button className={styles.discord}>
             <a href="http://localhost:3000/auth/discord">
               <FontAwesomeIcon icon={faDiscord} size="xs" style={{ width: '10px', marginRight: "5px" }} /> Continuar con Discord
+            </a>
+          </button>
+          <button className={styles.twitch}>
+            <a href="http://localhost:3000/auth/twitch">
+              <FontAwesomeIcon icon={faTwitch} size="xs" style={{ width: '10px', marginRight: "5px" }} /> Continuar con Twitch
             </a>
           </button>
         </section>
